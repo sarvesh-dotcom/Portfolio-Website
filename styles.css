@@ -389,6 +389,11 @@ nav .fas{
     .header-text h1{
         font-size: 30px;
     }
+
+    .header-text h1 span{
+        color: #ff004f;
+        background: #080808;
+    }
     nav .fas{
         display:block;
         font-size: 25px;
