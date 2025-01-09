@@ -106,9 +106,9 @@ nav ul li a:hover::after{
     flex-basis: 60%;
 }
 
-p.desc{
-    text-align: justify !important;
-    line-height: 1.2 !important;
+.about-col-2 p{
+    text-align: justify ;
+    line-height: 1.2 ;
 }
 
 .sub-title{
