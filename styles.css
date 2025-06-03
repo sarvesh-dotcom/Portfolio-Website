@@ -463,6 +463,19 @@ nav .fas{
     .copyright{
         font-size: 14px;
     }
+
+    .work-list{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+    .work img{
+        height: 200px;
+    }
+}
 }
 
 #msg{
