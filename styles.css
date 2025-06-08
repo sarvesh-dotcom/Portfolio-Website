@@ -216,24 +216,25 @@ nav ul li a:hover::after{
     padding: 50px 0;
 }
 
-.work-list{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* optional spacing between columns */
+  justify-content: space-between;
 }
 
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
+.work {
+  position: relative; /* Add this line */
+  flex: 0 1 calc(50% - 20px);
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  overflow: hidden;
 }
+
+
 
 .work img{
     width: 100%;
-    border-radius: 10px;
     display: block;
     transition: transform 0.5s;
 }
@@ -464,19 +465,15 @@ nav .fas{
         font-size: 14px;
     }
 
-    .work-list{
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+    .work {
+    flex: 0 1 100%; /* Stack one per row on small screens */
+  }
 
-    .work img{
-        height: 200px;
-    }
+  .work img {
+    height: 200px;
+  }
 }
-}
+
 
 #msg{
     color: #61b752;
