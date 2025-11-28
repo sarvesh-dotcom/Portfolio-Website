@@ -3,231 +3,504 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the portfolio of Sarvesh Khanal, a BSc CSIT student skilled in front-end development. Currently studying at Orchid International College.">
-    <meta name="keywords" content="Sarvesh Khanal, Portfolio, Web Development, Data Science, DBMS, BSc CSIT, Orchid International College, Front-end Developer, Programming">
+    <title>Sarvesh Khanal - Front End Developer</title>
+    <meta name="description" content="Portfolio of Sarvesh Khanal, a skilled Front End Developer specializing in modern web applications">
     <meta name="author" content="Sarvesh Khanal">
-    <title>Sarvesh Khanal</title>
-    <link rel="icon" href="logotop.png" type="image/icon type">
+    
+    <link rel="icon" type="image/png" href="logotop.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <meta property="og:title" content="Sarvesh Khanal - Front End Developer">
+    <meta property="og:description" content="Portfolio of Sarvesh Khanal, a skilled Front End Developer">
+    <meta property="og:type" content="website">
+    
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/3a838957ef.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="header">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
         <div class="container">
-            <nav>
-                <a href="/" ><img src="logo.png" class="logo" ></a>
-                <ul id="sidemenu">
-                     <li><a href="#header">Home</a></li>
-                     <li><a href="#about">About</a></li>
-                     <li><a href="#services">Services</a></li>
-                     <li><a href="#portfolio">Portfolio</a></li>
-                     <li><a href="#contact">Contact</a></li>
-                     <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
+            <div class="nav-content">
+                <a href="#home" class="logo">
+                    <span class="text-gradient">SK</span>
+                </a>
 
-            </nav>
-            <div class="header-text">
-                <p>Front End Developer</p>
-                <h1>Hi, I'm <span>Sarvesh</span> <br>Khanal</h1>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                    <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#services" class="mobile-nav-link">Services</a>
+                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
             </div>
         </div>
-    </div>
-    <!--about-->
-    <div id="about">
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="user.jpg">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Hi, I’m Sarvesh Khanal, a front-end developer with a passion for crafting modern, dynamic web applications using React.js.
-                         I am currently pursuing a Bachelor’s degree in Computer Science and Information Technology (BSc CSIT) at Orchid International College, where I am honing my skills in programming, problem-solving, and web development.
-                         I specialize in building user-friendly and responsive web interfaces, blending creativity with functionality 
-                         to deliver exceptional digital experiences. With a focus on clean and efficient code, I strive to bring innovative ideas to life.
-                        <br><br> When I’m not studying or coding, I enjoy exploring data science and 
-                        staying updated on the latest advancements in web technologies. Let’s connect and collaborate on exciting projects!</p>
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>React.js</span><br>Creating scalable and reusable front-end components.</li>
-                                <li><span>Python</span><br>Exploring data-driven solutions.</li>
-                                <li><span>PHP</span><br>Developing server-side logic for web applications.</li>
-                                <li><span>C/C++</span><br>Building a solid foundation in programming and algorithms.</li>
-                                <li><span>SQL</span><br>Basic knowledge of database management and querying.</li>
-                                <li><span>HTML/CSS</span><br>Designing and styling web interfaces.</li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>None</span><br>None</li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>2026</span><br>BSc CSIT from Orchid Int'l College</li>
-                                <li><span>2021</span><br>+2 in Science from NAMI College</li>
-                                <li><span>2019</span><br>SEE from Manakamana Sec School</li>
-                            </ul>
-                        </div>
+            <div class="hero-content">
+                <p class="hero-greeting">Hi, my name is</p>
+                <h1 class="hero-name"><span class="text-gradient">Sarvesh Khanal</span></h1>
+                <h2 class="hero-title">Front End Developer</h2>
+                <p class="hero-description">
+                    I craft beautiful, responsive, and user-friendly web experiences that bring ideas to life with modern technologies.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
                 </div>
             </div>
-    </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+        </a>
+    </section>
 
-    <!--services-->
-
-    <div id="services">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Front End Development</h2>
-                    <p>As a front-end developer, I specialize in creating engaging, responsive, and user-friendly web interfaces. </p>
-                        <a href="#">Learn More</a>
+            <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+            <div class="section-divider"></div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-paragraph">
+                        Hi, I’m Sarvesh Khanal, a front-end developer with a passion for crafting modern, 
+                        dynamic web applications using React.js. I am currently pursuing a Bachelor’s degree in Computer Science and 
+                        Information Technology (BSc CSIT) at Orchid International College, 
+                        where I am honing my skills in programming, problem-solving, and web development.
+                    </p>
+                    <p class="about-paragraph">
+                        I specialize in building user-friendly and responsive web interfaces, blending creativity with functionality
+                         to deliver exceptional digital experiences.
+
+                    </p>
+                    <p class="about-paragraph">
+                        When I’m not studying or coding, I enjoy exploring data science and staying updated on the latest advancements in web technologies. 
+                        Let’s connect and collaborate on exciting projects!
+                    </p>
                 </div>
 
-                
+                <div class="skills">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML5</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">CSS3</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">React</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Tailwind CSS</span>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlights">
+                <div class="highlight-card">
+                    <svg class="highlight-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    <h3 class="highlight-title">Clean Code</h3>
+                    <p class="highlight-description">Writing maintainable, scalable code that follows best practices</p>
+                </div>
+                <div class="highlight-card">
+                    <svg class="highlight-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                        <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                    <h3 class="highlight-title">Design Focus</h3>
+                    <p class="highlight-description">Creating beautiful interfaces with attention to detail</p>
+                </div>
+                <div class="highlight-card">
+                    <svg class="highlight-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                    <h3 class="highlight-title">Performance</h3>
+                    <p class="highlight-description">Building fast, optimized web applications</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!--portfolio-->
-     <div id="portfolio">
+    <!-- Services Section -->
+    <section id="services" class="services">
         <div class="container">
-            <h1 class="sub-title">My Projects</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="chefGPT.png">
-                    <div class="layer">
-                        <h3>ChefGPT</h3>
-                        <p>A React app that suggests recipes based on user entered ingredients.Uses a Hugging Face AI model for real-time recipe generation.</p>
-                        <a href="https://chefgpt-react.netlify.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
+            <h2 class="section-title">My <span class="text-gradient">Services</span></h2>
+            <div class="section-divider"></div>
+            <p class="section-description">
+                I offer comprehensive front-end development services to help bring your digital vision to life
+            </p>
 
-                <div class="work">
-                    <img src="memeGenerator.png">
-                    <div class="layer">
-                        <h3>Meme Generator App</h3>
-                        <p>A React-based Meme Generator app that uses the Imgflip API to create and customize memes with popular templates.</p>
-                        <a href="https://meme-generator-react-js-app.netlify.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
                     </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">Building responsive, modern websites with clean code and best practices using the latest technologies.</p>
                 </div>
-            
-                <div class="work">
-                    <img src="journal-home.png" alt="Travel Journal App">
-                    <div class="layer">
-                        <h3>Travel Journal App</h3>
-                        <p>I built a Travel Journal app using Vite+React for this project.</p>
-                        <a href="https://my-journal-reactapp.netlify.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
                     </div>
+                    <h3 class="service-title">Responsive Design</h3>
+                    <p class="service-description">Creating mobile-first designs that look perfect on all devices, from phones to desktop screens.</p>
                 </div>
-
-                <div class="work">
-                    <img src="res-home.png" alt="Restaurant App">
-                    <div class="layer">
-                        <h3>Restaurant App</h3>
-                        <p>A basic UI of a restaurant app built using React and parcel as bundler.</p>
-                        <a href="https://restaurant-app-parcel.netlify.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
                     </div>
+                    <h3 class="service-title">Single Page Applications</h3>
+                    <p class="service-description">Developing dynamic SPAs with React and modern frameworks for seamless user experiences.</p>
                 </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">UI/UX Implementation</h3>
+                    <p class="service-description">Transforming designs into pixel-perfect, interactive interfaces with smooth animations.</p>
+                </div>
+            </div>
         </div>
-        
-            <a href="https://github.com/sarvesh-dotcom" target="_blank" class="btn">See more on GitHub</a>
-        </div>
-    </div>
+    </section>
 
-    <!--contact-->
-    <div id="contact">
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
         <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>contact@sarveshkhanal.com.np</p>
-                    <div class="social-icons">
-                        <a href="https://np.linkedin.com/in/sarvesh-khanal-36a8691ab" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/sarvesh-dotcom" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.instagram.com/sarvesh_khanal/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+            <div class="section-divider"></div>
+            <p class="section-description">
+                Here are some of my recent projects that showcase my skills and passion for web development
+            </p>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="heartSystem.png" alt="Heart Disease Prediction System">
+                        <div class="project-overlay"></div>
                     </div>
-                    <a href="Sarvesh-Khanal-CV.pdf" download class="btn btn2">Download CV</a>
+                    <div class="project-content">
+                        <h3 class="project-title">Heart Disease Prediction System</h3>
+                        <p class="project-description">A machine learning–based system that predicts the likelihood of heart disease using Random Forest and stores user-specific prediction history for personalized insights.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sarvesh-dotcom/Heart-Disease-Prediction-System" class="btn-project btn-outline-project">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Code
+                            </a>
+                            <a href="https://cardiocareapp.netlify.app/" class="btn-project btn-primary-project">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message" ></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="chefGPT.png" alt="Chef GPT">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Chef GPT</h3>
+                        <p class="project-description">A React app that suggests recipes based on user entered ingredients. Uses a Hugging Face AI model for real-time recipe generation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sarvesh-dotcom/ChefGPT" class="btn-project btn-outline-project">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Code
+                            </a>
+                            <a href="https://chefgpt-react.netlify.app/" class="btn-project btn-primary-project">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="journal-home.png" alt="Travel Journal">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Travel Journal</h3>
+                        <p class="project-description">A static travel journal app built with React that displays various location visited along with photos and notes.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sarvesh-dotcom/Travel-Journal-App" class="btn-project btn-outline-project">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Code
+                            </a>
+                            <a href="https://my-journal-reactapp.netlify.app/" class="btn-project btn-primary-project">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="res-home.png" alt="Restaurant App">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Restaurant App</h3>
+                        <p class="project-description">A restaurant app built with React that allows users to browse menus with data fetched from Swiggy API.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sarvesh-dotcom/Restaurant-App" class="btn-project btn-outline-project">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Code
+                            </a>
+                            <a href="https://restaurant-app-parcel.netlify.app/" class="btn-project btn-primary-project">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+            <div class="section-divider"></div>
+            <p class="section-description">
+                Have a project in mind? Let's work together to create something amazing
+            </p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="contact-card-title">Email</h3>
+                            <a href="mailto:contact@sarveshkhanal.com.np" class="contact-card-link">contact@sarveshkhanal.com.np</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="contact-card-title">Phone</h3>
+                            <a href="tel:+9779840005616" class="contact-card-link">+977 9840005616</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="contact-card-title">Location</h3>
+                            <p class="contact-card-text">Kathmandu, Nepal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" rows="6" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <input type="hidden" name="time" id="time">
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
                     </form>
-                    <span id="msg"></span>
                 </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>Copyright © Sarvesh Khanal. All rights reserved.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-name text-gradient">Sarvesh Khanal</h3>
+                    <p class="footer-title">Front End Developer</p>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/sarvesh-dotcom" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/sarvesh-khanal" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/sarveshculer" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Sarvesh Khanal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <strong class="toast-title">Message sent!</strong>
+            <p class="toast-description">Thank you for reaching out. I'll get back to you soon.</p>
         </div>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    
 
-    <script>
-        var tablinks = document.getElementsByClassName('tab-links');
-        var tabcontents = document.getElementsByClassName('tab-contents');
-
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove('active-link');
-            }
-
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove('active-tab');
-            }
-
-            event.currentTarget.classList.add('active-link');
-            document.getElementById(tabname).classList.add('active-tab');
-        }
-    </script>
-
-
-<script>
-    var sidemenu = document.getElementById('sidemenu');
-    function openmenu(){
-        sidemenu.style.right = '0';
-    }
-
-    function closemenu(){
-        sidemenu.style.right = '-200px';
-    }
-</script>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyTNPwhO6C0TqpzitZApFo8gZRDOjRKkkXauf0fAP3IYtIVepLHk5emIiSjBP2-fPUu/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById('msg');
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message Sent Successfully";
-            setTimeout(function(){
-                msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-        })
-        .catch(error => {
-            msg.innerHTML = "Failed to send message. Please try again later.";
-            setTimeout(function(){
-                msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-        })
-    })
-  </script>
 </body>
 </html>
